@@ -7,24 +7,23 @@
     <b>Sistem Pendukung Keputusan (SPK) Berbasis Machine Learning untuk Prediksi Kemenangan Mobile Legends</b>
   </p>
 
-  <p>
-    <a href="[https://streamlit.io/](https://streamlit.io/)">
-      <img src="[https://img.shields.io/badge/Streamlit-v1.31-FF4B4B?style=flat&logo=streamlit&logoColor=white](https://img.shields.io/badge/Streamlit-v1.31-FF4B4B?style=flat&logo=streamlit&logoColor=white)" alt="Streamlit">
-    </a>
-    <a href="[https://www.python.org/](https://www.python.org/)">
-      <img src="[https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)" alt="Python">
-    </a>
-    <a href="[https://xgboost.readthedocs.io/](https://xgboost.readthedocs.io/)">
-      <img src="[https://img.shields.io/badge/Model-XGBoost-orange?style=flat&logo=xgboost&logoColor=white](https://img.shields.io/badge/Model-XGBoost-orange?style=flat&logo=xgboost&logoColor=white)" alt="XGBoost">
-    </a>
-    <a href="#">
-      <img src="[https://img.shields.io/badge/Status-Skripsi-green?style=flat](https://img.shields.io/badge/Status-Skripsi-green?style=flat)" alt="Status">
-    </a>
-  </p>
+  <a href="https://streamlit.io/">
+    <img src="https://img.shields.io/badge/Streamlit-v1.31-FF4B4B?style=flat&logo=streamlit&logoColor=white" alt="Streamlit">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+  </a>
+  <a href="https://xgboost.readthedocs.io/">
+    <img src="https://img.shields.io/badge/Model-XGBoost-orange?style=flat&logo=xgboost&logoColor=white" alt="XGBoost">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Status-Skripsi-green?style=flat" alt="Status">
+  </a>
 
-  <br>
-  <a href="LINK_STREAMLIT_CLOUD_KAMU_DISINI">
-    <img src="[https://img.shields.io/badge/](https://img.shields.io/badge/)🚀_COBA_APLIKASI_SEKARANG_(LIVE_DEMO)-00C9FF?style=for-the-badge&logo=appveyor" alt="Live Demo">
+  <br><br>
+
+  <a href="https://mcggai-v2.streamlit.app/">
+    <img src="https://img.shields.io/badge/🚀_COBA_APLIKASI_SEKARANG_(LIVE_DEMO)-00C9FF?style=for-the-badge&logo=appveyor" alt="Live Demo">
   </a>
   <br>
   <br>
@@ -43,15 +42,13 @@ Proyek ini dikembangkan sebagai **Tugas Akhir / Skripsi** Program Studi Informat
 ## ⭐ Fitur Utama
 
 * 🔮 **Prediksi Real-Time:** Menghitung peluang menang berdasarkan kombinasi Commander, Level, dan Sinergi.
-* ⚡ **Offline Mode Ready:** Menggunakan animasi lokal (Lottie Files) sehingga aplikasi tetap ringan dan cepat meski koneksi lambat.
+* ⚡ **Offline Mode Ready:** Menggunakan animasi lokal (Lottie Files) sehingga aplikasi tetap ringan dan cepat.
 * 🎨 **Cyberpunk UI:** Antarmuka modern dengan tema gelap futuristik dan efek glassmorphism.
 * 📊 **Analisis Data:** Menampilkan detail kekuatan sinergi aktif secara visual.
 
 ---
 
 ## ⚖️ Kelebihan & Kekurangan Sistem
-
-Sebagai karya ilmiah, penting untuk memaparkan batasan sistem secara jujur:
 
 ### ✅ Kelebihan (Pros)
 1.  **Akurasi Tinggi:** Menggunakan *Ensemble Learning* (XGBoost) yang terbukti lebih akurat dibanding Single Decision Tree.
@@ -60,9 +57,9 @@ Sebagai karya ilmiah, penting untuk memaparkan batasan sistem secara jujur:
 4.  **Tanpa Backend Rumit:** Dibangun sepenuhnya dengan Python (Streamlit), memudahkan maintenance.
 
 ### ⚠️ Kekurangan (Cons)
-1.  **Ketergantungan Data Patch:** Akurasi prediksi sangat bergantung pada Meta game saat ini. Jika Mobile Legends melakukan update besar (Nerf/Buff), model AI perlu dilatih ulang (Retrain).
-2.  **Faktor RNG:** Sistem tidak dapat memprediksi faktor keberuntungan in-game seperti *Item Drop*, *Critical Hit*, atau posisi hero di papan catur (Positioning).
-3.  **Terbatas pada Sinergi:** Saat ini prediksi berfokus pada Sinergi & Commander, belum memperhitungkan Level Bintang Hero (Bintang 1/2/3) secara spesifik.
+1.  **Ketergantungan Data Patch:** Akurasi prediksi sangat bergantung pada Meta game saat ini. Jika Mobile Legends melakukan update besar (Nerf/Buff), model AI perlu dilatih ulang.
+2.  **Faktor RNG:** Sistem tidak dapat memprediksi faktor keberuntungan in-game seperti *Item Drop* atau *Critical Hit*.
+3.  **Terbatas pada Sinergi:** Prediksi berfokus pada komposisi Sinergi & Commander.
 
 ---
 
@@ -72,22 +69,18 @@ Sebagai karya ilmiah, penting untuk memaparkan batasan sistem secara jujur:
 * **Framework Web:** Streamlit
 * **Machine Learning:** Scikit-Learn, XGBoost, Joblib
 * **Pengolahan Data:** Pandas, NumPy
-* **Visualisasi:** Streamlit-Lottie (JSON Animations), CSS3 Custom
+* **Visualisasi:** Streamlit-Lottie, CSS3 Custom
 
 ---
 
 ## 💻 Cara Menjalankan (Instalasi Lokal)
 
-Jika Anda ingin menjalankan proyek ini di laptop Anda sendiri, ikuti langkah berikut:
+Jika Anda ingin menjalankan proyek ini di laptop Anda sendiri:
 
-### 1. Prasyarat
-Pastikan Anda sudah menginstall [Python](https://www.python.org/downloads/) dan [Git](https://git-scm.com/downloads).
-
-### 2. Clone Repository
-Buka terminal/CMD, lalu ketik:
-
-    git clone [https://github.com/USERNAME_GITHUB_KAMU/NAMA_REPOSITORY.git](https://github.com/USERNAME_GITHUB_KAMU/NAMA_REPOSITORY.git)
-    cd NAMA_REPOSITORY
+### 1. Clone Repository
+```bash
+git clone [https://github.com/2eight9/mcggs4_v2.git](https://github.com/2eight9/mcggs4_v2.git)
+cd mcggs4_v2
 
 ### 3. Install Library
 Install semua kebutuhan sistem yang ada di `requirements.txt`:
@@ -116,17 +109,3 @@ Aplikasi akan otomatis terbuka di browser Anda di alamat `http://localhost:8501`
     ├── 📜 requirements.txt     # Daftar library wajib
     └── 📜 README.md            # Dokumentasi ini
 
----
-
-## 👨‍💻 Kontak Developer
-
-**Apriliano Boimau**
-* 📍 Mahasiswa Informatika, Universitas Amikom Yogyakarta
-* 🌍 Asal: Soe (TTS), Nusa Tenggara Timur
-* 📧 Email: [Via Menu Contact di Aplikasi]
-
----
-
-<div align="center">
-  <small>Dibuat dengan ❤️ untuk Skripsi Informatika 2026</small>
-</div> 
