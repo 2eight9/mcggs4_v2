@@ -1,0 +1,377 @@
+/* ==========================================================================
+   MAGIC CHESS AI - FINAL FIXES
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* 1. BACKGROUND UTAMA */
+.stApp {
+    background-color: #0e1117 !important;
+    background-image: none !important; 
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 2. HEADER & JUDUL */
+h1, h2, h3, h4 {
+    font-family: 'Rajdhani', sans-serif !important;
+    color: #ffffff !important;
+    text-transform: uppercase;
+}
+p, label, li, .stMarkdown, .stCaption {
+    color: #e0e0e0 !important;
+}
+
+/* 3. SIDEBAR FIX */
+[data-testid="stSidebar"] {
+    background-color: #000000 !important;
+    border-right: 1px solid #333;
+}
+[data-testid="stSidebar"] * {
+    color: white !important; 
+}
+
+/* 4. PERBAIKAN PANEL SINERGI (EXPANDER) */
+[data-testid="stExpander"] details summary {
+    background-color: #1f2937 !important;
+    color: white !important;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 10px;
+}
+[data-testid="stExpander"] details summary:hover {
+    background-color: #374151 !important;
+    color: #00C9FF !important;
+}
+[data-testid="stExpander"] details summary svg { fill: white !important; }
+[data-testid="stExpander"] details div[role="group"] {
+    background-color: #111827 !important;
+    border: 1px solid #374151;
+    border-top: none;
+    padding: 15px;
+}
+
+/* 5. KARTU KONTEN */
+.glass-card {
+    background-color: #1f2937; 
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 6. INPUT FIELD FIX */
+.stTextInput input, .stNumberInput input {
+    background-color: #111827 !important;
+    color: white !important;
+    border: 1px solid #4b5563 !important;
+}
+
+/* 7. DROPDOWN (SELECTBOX) FIX TOTAL - AGAR TIDAK PUTIH */
+/* Kotak Utama */
+.stSelectbox div[data-baseweb="select"] > div {
+    background-color: #111827 !important;
+    color: white !important;
+    border: 1px solid #4b5563 !important;
+}
+
+/* Pop-up Menu Container */
+div[data-baseweb="popover"] {
+    background-color: #111827 !important;
+    border: 1px solid #4b5563;
+}
+
+/* Daftar Item (List) */
+ul[data-testid="stSelectboxVirtualDropdown"] {
+    background-color: #111827 !important;
+}
+
+/* Item Individual */
+li[role="option"] {
+    background-color: #111827 !important; /* Hitam */
+    color: white !important;               /* Teks Putih */
+}
+
+/* Item saat Hover/Dipilih */
+li[role="option"]:hover, li[role="option"][aria-selected="true"] {
+    background-color: #00C9FF !important; /* Biru Cyan */
+    color: black !important;               /* Teks Hitam */
+}
+
+/* 8. TOMBOL MODERN */
+.stButton > button {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    border: 1px solid #00C9FF;
+    border-radius: 4px;
+    color: #00C9FF;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 201, 255, 0.1);
+}
+.stButton > button:hover {
+    background: #00C9FF;
+    color: #000000;
+    border-color: #00C9FF;
+    box-shadow: 0 0 25px rgba(0, 201, 255, 0.6);
+    transform: translateY(-2px);
+}
+.stButton > button:active { transform: scale(0.98); }
+
+
+/* ... (kode css sebelumnya biarkan saja) ... */
+
+/* 8. HILANGKAN TULISAN "Press Enter to Apply" */
+[data-testid="InputInstructions"] {
+    display: none !important;
+}
+
+/* 9. WARNA TEKS NUMBER INPUT AGAR JELAS */
+.stNumberInput input {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* ... BIARKAN KODE CSS LAMA DI ATAS, TAMBAHKAN INI DI BAWAHNYA ... */
+
+/* ==========================================================================
+   NEXT LEVEL UI - ANIMATIONS & BADGES
+   ========================================================================== */
+
+/* 1. ANIMASI KARTU MELAYANG (FLOATING) */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-card {
+    animation: float 4s ease-in-out infinite;
+    background-color: #1f2937; /* Base Dark Color */
+    border: 1px solid #374151;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.floating-card:hover {
+    border-color: #00C9FF;
+    box-shadow: 0 0 25px rgba(0, 201, 255, 0.4);
+    transform: scale(1.02); /* Sedikit membesar saat disentuh */
+}
+
+/* 2. TOMBOL DOKUMENTASI (BADGES) */
+.tech-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 6px;
+    background: rgba(17, 24, 39, 0.9);
+    border: 1px solid #4b5563;
+    border-radius: 50px; /* Bulat kapsul */
+    color: #00C9FF !important;
+    text-decoration: none; /* Hapus garis bawah link */
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-badge:hover {
+    background: #00C9FF;
+    color: #000000 !important; /* Teks jadi hitam saat hover */
+    box-shadow: 0 0 15px #00C9FF;
+    border-color: #00C9FF;
+    transform: translateY(-3px);
+}
+
+/* 3. HERO TITLE (JUDUL BESAR DENGAN GRADASI) */
+.hero-title {
+    font-size: 4rem; /* Ukuran Super Besar */
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #00C9FF);
+    /* Solusi Warning 'background-clip' */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-shadow: 0 0 30px rgba(0, 201, 255, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #a0aec0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* ... KODE LAMA DI ATAS BIARKAN SAJA ... */
+
+/* ==========================================================================
+   FINAL TOUCH - CYBER CARD DESIGN
+   ========================================================================== */
+
+/* Desain Kartu Kaca Futuristik (Dipakai di Home, About, Contact) */
+.cyber-card {
+    /* Gradasi Hitam ke Biru Gelap Malam */
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
+    
+    /* Efek Blur di belakangnya (Kaca) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Border tipis menyala */
+    border: 1px solid rgba(0, 201, 255, 0.2);
+    border-radius: 16px;
+    padding: 35px;
+    
+    /* Bayangan lembut */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #e2e8f0;
+}
+
+/* Update Floating Card di Home agar senada */
+.floating-card {
+    animation: float 4s ease-in-out infinite;
+    background: linear-gradient(145deg, #111827, #1f2937); /* Lebih gelap & elegan */
+    border: 1px solid rgba(0, 201, 255, 0.3); /* Border Cyan tipis */
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.floating-card:hover {
+    border-color: #00C9FF;
+    box-shadow: 0 0 30px rgba(0, 201, 255, 0.2); /* Glow saat disentuh */
+    transform: scale(1.03);
+}
+
+
+
+
+
+/* ... BIARKAN KODE LAMA DI ATAS ... */
+
+/* ==========================================================================
+   FINAL UPGRADE: SIDEBAR & FOOTER (CYBERPUNK HUD)
+   ========================================================================== */
+
+/* 1. KUSTOMISASI SIDEBAR (CONTROL PANEL) */
+section[data-testid="stSidebar"] {
+    background-color: #020617 !important; /* Hitam Sangat Pekat */
+    border-right: 2px solid #00C9FF;      /* Garis Neon Kanan */
+    box-shadow: 10px 0 30px rgba(0, 201, 255, 0.1);
+}
+
+/* Judul/Logo di Sidebar */
+.sidebar-logo-container {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+
+/* 2. NAVIGASI RADIO BUTTON (JADI TOMBOL KOTAK KEREN) */
+/* Ubah tampilan pilihan menu (Radio) menjadi tombol blok */
+.stRadio > div[role="radiogroup"] > label {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    /* --- PERBAIKAN LEBAR --- */
+    display: flex;          /* Agar ikon dan teks sejajar */
+    align-items: center;    /* Teks di tengah vertikal */
+    width: 100% !important; /* WAJIB: Agar tombol melebar penuh ke samping */
+    justify-content: flex-start; /* Teks rata kiri */
+}
+
+/* Efek Hover pada Menu */
+.stRadio > div[role="radiogroup"] > label:hover {
+    border-color: #00C9FF;
+    background-color: #1e293b;
+    transform: translateX(5px); /* Geser sedikit ke kanan saat disentuh */
+}
+
+/* Menu yang SEDANG DIPILIH (Active) */
+.stRadio > div[role="radiogroup"] > label[data-checked="true"] {
+    background: linear-gradient(90deg, #00C9FF, #0072ff) !important;
+    color: white !important;
+    border-color: #00C9FF;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.5);
+    width: 100% !important; /* Pastikan yang aktif juga lebar penuh */
+}
+
+/* Teks di dalam menu radio */
+.stRadio > div[role="radiogroup"] > label p {
+    font-size: 1.1rem !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    margin: 0 !important; /* Hapus margin bawaan teks */
+}
+/* Efek Hover pada Menu */
+.stRadio > div[role="radiogroup"] > label:hover {
+    border-color: #00C9FF;
+    background-color: #1e293b;
+    transform: translateX(5px); /* Geser sedikit ke kanan saat disentuh */
+}
+
+/* Menu yang SEDANG DIPILIH (Active) */
+.stRadio > div[role="radiogroup"] > label[data-checked="true"] {
+    background: linear-gradient(90deg, #00C9FF, #0072ff) !important;
+    color: white !important;
+    border-color: #00C9FF;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.5);
+}
+
+/* Teks di dalam menu radio */
+.stRadio > div[role="radiogroup"] > label p {
+    font-size: 1.1rem !important;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* 3. FOOTER (STATUS BAR MELAYANG DI BAWAH) */
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.95); /* Hampir solid hitam */
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #00C9FF;
+    color: #94a3b8;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between; /* Kiri Kanan Terpisah */
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    box-shadow: 0 -5px 20px rgba(0, 201, 255, 0.1);
+}
+
+/* Animasi kedip untuk status online */
+@keyframes blink { 50% { opacity: 0; } }
+.status-dot {
+    height: 8px; width: 8px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    animation: blink 2s infinite;
+}
