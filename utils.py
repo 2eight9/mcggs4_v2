@@ -89,7 +89,7 @@ def get_synergy_limits():
         "shadowcell": 10, "mortal_rival": 2, "kof": 11,
         "soul_vessels": 10, "starwing": 10, "luminexus": 10,
         "aspirant": 10, "toy_mischief": 10, "glory_league": 6,
-        "metro_zero": 22, "beyond_the_clouds": 4, 
+        "metro_zero": 22, "beyond_the_clouds": 3, 
         "default": 10
     }
 
@@ -104,7 +104,7 @@ def get_synergy_tiers():
         "aspirant": [2, 4, 6, 10], "toy_mischief": [2, 4, 6, 10],
         "shadowcell": [2, 4, 6, 10], "metro_zero": metro_tiers, 
         "mortal_rival": [1, 2], "glory_league": [2, 4, 6],
-        "beyond_the_clouds": [2, 4], 
+        "beyond_the_clouds": [2, 3], 
 
         # === ROLE (CLASS) ===
         "weapon_master": [2, 4, 6], "marksman": [2, 4, 6], "mage": [2, 4, 6],
